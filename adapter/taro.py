@@ -1,3 +1,3 @@
 class Taro:
-  def enjoyWithAllClassmate():
-    print("みんなで楽しむ")
+    def enjoyWithAllClassmate(self):
+        print("みんなで楽しむ")

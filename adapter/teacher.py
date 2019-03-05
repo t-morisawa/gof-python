@@ -1,5 +1,5 @@
-from taro import Taro
+from new_taro import NewTaro
 
 if __name__=='__main__':
-    chairperson = Taro()
+    chairperson = NewTaro()
     chairperson.organizeClass()
