@@ -1,11 +1,13 @@
+from paper import Paper
+
 class Teacher:
     def createManyCrystals(self):
+        paper = Paper('雪の結晶')
+        self.drawCrystal(paper);
+        self.cutAccordanceWithLine(paper);
         papers = []
         for i in range(100):
-            papers.append(Paper())
-        for paper in papers
-            drawCrystal(paper); # 時間がかかる
-            cutAccordanceWithLine(paper); # 時間がかかる
+            papers.append(paper.createClone())
         return papers;
 
     def drawCrystal(self, paper):
@@ -13,5 +15,5 @@ class Teacher:
         pass
 
     def cutAccordanceWithLine(self, paper):
-        // 描かれた線に沿ってきれいに切るには時間がかかる
+        # 描かれた線に沿ってきれいに切るには時間がかかる
         pass
