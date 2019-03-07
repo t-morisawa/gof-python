@@ -1,6 +1,19 @@
 from paper import Paper
+from prototype_keeper import PrototypeKeeper
 
 class Teacher:
+    def createManyCrystalsAndTrees(self):
+        paper1 = Paper('雪の結晶')
+        paper2 = Paper('もみの木')
+        keeper = PrototypeKeeper()
+        keeper.addCloneable('snowflake', paper1)
+        keeper.addCloneable('tree', paper2)
+        papers = []
+        for i in range(100):
+            papers.append(keeper.getClone('snowflake'))
+            papers.append(keeper.getClone('tree'))
+        return papers;
+
     def createManyCrystals(self):
         paper = Paper('雪の結晶')
         self.drawCrystal(paper);
