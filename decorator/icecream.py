@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
-class IceCream(metaclass=ABCMeta):
+class Icecream(metaclass=ABCMeta):
     @abstractmethod
     def getName():
         pass
