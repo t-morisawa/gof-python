@@ -1,4 +1,6 @@
-class File:
+from directory_entry import DirectoryEntry
+
+class File(DirectoryEntry):
     def __init__(self, name):
         self.name = name
 

@@ -1,6 +1,8 @@
 from file_ import File
+from directory_entry import DirectoryEntry
 
-class Directory:
+
+class Directory(DirectoryEntry):
     def  __init__(self, name):
         self.name = name
         self.list_ = []
@@ -10,10 +12,5 @@ class Directory:
 
     def remove(self):
         for item in self.list_:
-            if(isinstance(item, File)):
-                item.remove()
-            elif(isinstance(item, Directory)):
-                item.remove()
-            else:
-                System.out.println("削除できません")
+            item.remove()
         print(self.name + "を削除しました。")
