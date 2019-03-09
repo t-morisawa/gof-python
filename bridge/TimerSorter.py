@@ -1,7 +1,9 @@
 from datetime import datetime
+from Sorter import Sorter
+
 
 class TimerSorter(Sorter):
-    def timerSorter(self, list_):
+    def timerSort(self, list_):
         start = datetime.now()
         self.sort(obj)
         end = datetime.now()

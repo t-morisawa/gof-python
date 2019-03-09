@@ -1,6 +1,5 @@
 from Sorter import Sorter
 
-class BubbleSorter(Sorter):
-    def sort(list_):
-        # バブルソート
-        pass
+class BubbleSorter():
+    def sort(self, list_):
+        print('バブルソート')

@@ -1,6 +1,6 @@
-from abc import ABCMeta, abstractmethod
+class Sorter():
+    def __init__(self, sortImple):
+        self.sortImple = sortImple
 
-class Sorter(ABCMeta):
-    @abstractmethod
-    def sort(list_):
-        pass
+    def sort(self, list_):
+        self.sortImple.sort(list_)

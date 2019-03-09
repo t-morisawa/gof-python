@@ -1,6 +1,5 @@
 from Sorter import Sorter
 
-class QuickSorter(Sorter):
-    def sort(list_):
-        # クイックソート
-        pass
+class QuickSorter():
+    def sort(self, list_):
+        print('クイックソート')
