@@ -1,5 +1,7 @@
 from teacher import Teacher
 from home import Home
+from tanaka_home import TanakaHome
+from suzuki_home import SuzukiHome
 
 
 class RookieTeacher(Teacher):
@@ -10,15 +12,6 @@ class RookieTeacher(Teacher):
         if(isinstance(student_home, Home)):
             print("こんにちは")
         if(isinstance(student_home, TanakaHome)):
-            print("こんにちは")
+            student_home.praisedChild()
         if(isinstance(student_home, SuzukiHome)):
-            print("こんにちは")
-
-    def visit(self, TanakaHome studentHome):
-        studentHome.praisedChild();
-
-    def visit(self, SuzukiHome studentHome){
-        studentHome.reprovedChild();
-    }
-}
-
+            student_home.reprovedChild()

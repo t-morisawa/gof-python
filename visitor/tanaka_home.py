@@ -2,7 +2,7 @@ from home import Home
 from teacher_acceptor import TeacherAcceptor
 
 
-class SuzukiHome(Home, TeacherAcceptor):
+class TanakaHome(Home, TeacherAcceptor):
     def praisedChild(self):
         print("あら、先生ったらご冗談を")
         return Tea()
