@@ -12,5 +12,5 @@ if __name__ == '__main__':
     veteran = ChiefTeacher("ベテラン先生")
     staffMeeting = StaffMeeting("職員会議")
     nakagawa.setNext(rookie).setNext(veteran).setNext(staffMeeting)
-    nakagawa.judge(Question("おやつはいくらまで？",Level(1)))
-    nakagawa.judge(Question("携帯電話持って行ってよい？",Level(3)))
+    nakagawa.putQuestion(Question("おやつはいくらまで？",Level(1)))
+    nakagawa.putQuestion(Question("携帯電話持って行ってよい？",Level(3)))
