@@ -3,4 +3,4 @@ class Level:
         self.level = level
 
     def lessThan(self, level):
-        return self.level < level
+        return self.level < level.level
