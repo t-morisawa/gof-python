@@ -12,7 +12,7 @@ class Librarian:
         if location is not None:
             # 貸出中かチェックする
             lending_list = LendingList()
-            if (lending_list.check(bookName)):
+            if lending_list.check(bookName):
                 # 貸出中のとき
                 return "貸出中です"
             else:
