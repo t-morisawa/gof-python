@@ -17,3 +17,17 @@ class StatePatternYumichan():
     # @return
     def getProtectionForCold(self):
         return self.state.getProtectionForCold()
+
+
+from state import State, OrdinaryState, BadMoodState
+
+if __name__ == "__main__":
+    yumi = StatePatternYumichan()
+    ord = OrdinaryState()
+    yumi.changeState(ord)
+    print(yumi.morningGreet())
+    print(yumi.getProtectionForCold())
+    bad = BadMoodState()
+    yumi.changeState(bad)
+    print(yumi.morningGreet())
+    print(yumi.getProtectionForCold())
