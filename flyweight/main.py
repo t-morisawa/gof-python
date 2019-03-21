@@ -1,4 +1,4 @@
-from human_letter import HumanLetter
+from human_letter_factory import HumanLetterFactory
 
 
 def takeAPhoto(letter):
@@ -6,25 +6,26 @@ def takeAPhoto(letter):
 
 
 if __name__ == '__main__':
-    あ = HumanLetter("あ")
+    factory = HumanLetterFactory.get_instance()
+    あ = factory.getHumanLetter("あ")
     takeAPhoto(あ)
-    い = HumanLetter("い")
+    い = factory.getHumanLetter("い")
     takeAPhoto(い)
-    は = HumanLetter("は")
+    は = factory.getHumanLetter("は")
     takeAPhoto(は)
-    あ2 = HumanLetter("あ")
+    あ2 = factory.getHumanLetter("あ")
     takeAPhoto(あ2)
-    い2 = HumanLetter("い")
+    い2 = factory.getHumanLetter("い")
     takeAPhoto(い2)
-    よ = HumanLetter("よ")
+    よ = factory.getHumanLetter("よ")
     takeAPhoto(よ)
-    り = HumanLetter("り")
+    り = factory.getHumanLetter("り")
     takeAPhoto(り)
-    も = HumanLetter("も")
+    も = factory.getHumanLetter("も")
     takeAPhoto(も)
-    あ3 = HumanLetter("あ")
+    あ3 = factory.getHumanLetter("あ")
     takeAPhoto(あ3)
-    お = HumanLetter("お")
+    お = factory.getHumanLetter("お")
     takeAPhoto(お)
-    い3 = HumanLetter("い")
+    い3 = factory.getHumanLetter("い")
     takeAPhoto(い3)
