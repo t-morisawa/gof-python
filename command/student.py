@@ -1,5 +1,6 @@
 from beaker import Beaker
 
+
 if __name__ == "__main__":
     beaker = Beaker(100, 0)
     beaker.experiment(Beaker.ADD_SALT)

@@ -6,28 +6,28 @@ class Beaker():
     def __init__(self, water, salt):
         self.water = water
         self.salt = salt
-        self.melted = False
         self.mix()
 
     def experiment(self, param):
-        if (param == Beaker.ADD_SALT):
+        if param == Beaker.ADD_SALT:
+            print('食塩を1gずつ加える実験')
             while self.is_melted():
                 self.add_salt(1)
                 self.mix()
+            self.note()
 
-        if (param == Beaker.ADD_WATER):
-            while not self.is_melted:
+        if param == Beaker.ADD_WATER:
+            print('水を10gずつ加える実験')
+            while not self.is_melted():
                 self.add_water(10)
                 self.mix()
+            self.note()
 
-        print('食塩を1gずつ加える実験')
-        self.note()
-            
     def add_salt(self, salt):
-        self.salt + salt
+        self.salt = self.salt + salt
 
     def add_water(self, water):
-        self.water + water
+        self.water = self.water + water
 
     def mix(self):
         # 溶解度以上に食塩が含まれる場合は溶けきらない
@@ -43,6 +43,6 @@ class Beaker():
         return self.melted
 
     def note(self):
-        print('水: ' + self.water + 'g')
-        print('食塩: ' + self.salt + 'g')
-        print('濃度: ' + (self.salt / (self.water + self.salt)) * 100 + '%')
+        print('水: ' + str(self.water) + 'g')
+        print('食塩: ' + str(self.salt) + 'g')
+        print('濃度: ' + str(self.salt / (self.water + self.salt) * 100) + '%')
